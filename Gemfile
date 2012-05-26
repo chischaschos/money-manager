@@ -18,19 +18,29 @@ gem 'validates_timeliness'
 
 group :test do
   gem 'capybara'
+
   gem 'rspec'
+
   gem 'rspec-rails'
+
   gem 'database_cleaner'
+
   gem 'factory_girl_rails'
+
   gem 'mongoid-rspec'
 end
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'jquery-ui-rails'
+
   gem 'sass-rails',   '~> 3.2.3'
+
   gem 'coffee-rails', '~> 3.2.1'
+
   gem "twitter-bootstrap-rails"
+
   gem 'bootstrap-sass'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
