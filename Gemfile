@@ -4,6 +4,8 @@ gem 'rails', '3.2.3'
 
 gem 'mongoid'
 
+gem 'mongoid_taggable'
+
 gem 'bson_ext'
 
 gem 'haml-rails'
@@ -11,6 +13,8 @@ gem 'haml-rails'
 gem 'devise'
 
 gem 'responders'
+
+gem 'validates_timeliness'
 
 group :test do
   gem 'capybara'
@@ -26,6 +30,7 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem "twitter-bootstrap-rails"
   gem 'bootstrap-sass'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
