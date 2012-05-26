@@ -2,7 +2,7 @@ class ExpensesController < ApplicationController
   # GET /expenses
   # GET /expenses.xml
   def index
-    @expenses = Expense.all
+    @expenses = Services::ExpenseReport.new :current
     respond_with(@expenses)
   end
 

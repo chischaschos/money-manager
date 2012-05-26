@@ -10,4 +10,9 @@ class Expense
   validates_numericality_of :amount
   validates_presence_of :title
   validates_datetime :date
+
+  def self.daily date
+    where(:date.gte => date.beginning_of_day,
+          :date.lt => date.end_of_day)
+  end
 end
