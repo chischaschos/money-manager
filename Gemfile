@@ -19,7 +19,15 @@ gem 'validates_timeliness'
 gem "rails-backbone"
 
 group :test do
+  gem 'webmock'
+
+  gem 'vcr'
+
+  gem 'launchy'
+
   gem 'capybara'
+
+  gem 'guard-rspec'
 
   gem 'rspec'
 

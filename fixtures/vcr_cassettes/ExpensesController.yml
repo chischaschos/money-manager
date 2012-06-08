@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: ! 'Found '
+    headers:
+      Location:
+      - http://localhost:3000/users/sign_in
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - a5deae52c421a8c05c81a8da700974fe
+      X-Runtime:
+      - '0.105365'
+      Content-Length:
+      - '101'
+      Server:
+      - WEBrick/1.3.1 (Ruby/1.9.3/2011-09-23)
+      Date:
+      - Fri, 08 Jun 2012 22:19:25 GMT
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _money-manager_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJWUzOTI4OGRhMjNmMDc0NGEyMGExNWY4NTg1ZjNlMWI1BjsAVEkiE3VzZXJfcmV0dXJuX3RvBjsARkkiBi8GOwBGSSIKZmxhc2gGOwBGbzolQWN0aW9uRGlzcGF0Y2g6OkZsYXNoOjpGbGFzaEhhc2gJOgpAdXNlZG86CFNldAY6CkBoYXNoewA6DEBjbG9zZWRGOg1AZmxhc2hlc3sGOgphbGVydEkiNllvdSBuZWVkIHRvIHNpZ24gaW4gb3Igc2lnbiB1cCBiZWZvcmUgY29udGludWluZy4GOwBUOglAbm93MA%3D%3D--daebf53338a001b067b395f64717ec36df3279c7;
+        path=/; HttpOnly
+    body:
+      encoding: US-ASCII
+      string: <html><body>You are being <a href="http://localhost:3000/users/sign_in">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Fri, 08 Jun 2012 22:19:25 GMT
+recorded_with: VCR 2.1.1
