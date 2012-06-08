@@ -16,6 +16,8 @@ gem 'responders'
 
 gem 'validates_timeliness'
 
+gem "rails-backbone"
+
 group :test do
   gem 'capybara'
 
