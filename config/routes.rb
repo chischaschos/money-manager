@@ -1,8 +1,7 @@
 MoneyManager::Application.routes.draw do
+  devise_for :users
+
   resources :expenses
 
-  get "welcome/index"
-
-  devise_for :users
-  root :to => 'welcome#index'
+  root :to => 'expenses#index'
 end

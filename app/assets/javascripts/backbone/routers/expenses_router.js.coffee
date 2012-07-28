@@ -11,8 +11,8 @@ class MoneyManager.Routers.ExpensesRouter extends Backbone.Router
     ".*"        : "index"
 
   newExpense: ->
-    @view = new MoneyManager.Views.Expenses.NewView(collection: @expenses)
-    $("#expenses").html(@view.render().el)
+    @view = new MoneyManager.Views.Expenses.NewView collection: @expenses
+    $("#expenses").html @view.render().el
 
   index: ->
     @view = new MoneyManager.Views.Expenses.IndexView(expenses: @expenses)

@@ -1,10 +1,14 @@
 # Money Manager
+This application is intended to replace my wife's spread sheets used to
+manage our family incomes/expenses.
 
-## TO-DO
-* Show expenses by:
+
+## Expected features
+
+### v1
+
+* Enter expenses
+* Expenses views:
  - Daily
  - Weekly
  - Monthly
-* Enter expenses
-* Add balances
-* Show balances

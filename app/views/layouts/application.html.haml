@@ -26,15 +26,14 @@
             %span.icon-bar
             %span.icon-bar
           %a.brand(href="#") MoneyManager
-          .container.nav-collapse
-            %ul.nav
-              %li= link_to "Expenses", expenses_path
+          = render 'shared/toolbar'
 
     .container-fluid
 
       .row-fluid
         .span12
           = yield
+
 
       %footer
         %p &copy; Company 2012
@@ -43,4 +42,3 @@
       \==================================================
     / Placed at the end of the document so the pages load faster
     = javascript_include_tag "application"
-

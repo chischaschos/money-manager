@@ -13,7 +13,9 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 VCR.configure do |c|
   c.cassette_library_dir = 'fixtures/vcr_cassettes'
   c.hook_into :webmock # or :fakeweb
+  c.ignore_localhost = true
 end
+
 
 RSpec.configure do |config|
   # Other things
