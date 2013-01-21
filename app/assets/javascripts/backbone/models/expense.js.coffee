@@ -6,6 +6,7 @@ class MoneyManager.Models.Expense extends Backbone.Model
     description: null
     date: null
     amount: null
+    tags: null
 
 class MoneyManager.Collections.ExpensesCollection extends Backbone.Collection
   model: MoneyManager.Models.Expense

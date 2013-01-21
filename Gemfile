@@ -1,64 +1,36 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
-
-gem 'mongoid'
-
-gem 'mongoid_taggable'
-
 gem 'bson_ext'
-
-gem 'haml-rails'
-
 gem 'devise'
-
+gem 'haml-rails'
+gem 'rails', '~>3.2'
+gem "rails-backbone"
 gem 'responders'
-
+gem 'jquery-rails'
+gem 'mongoid'
+gem 'mongoid_taggable'
 gem 'validates_timeliness'
 
-gem "rails-backbone"
+group :assets do
+  gem 'bootstrap-sass'
+  gem 'coffee-rails'
+  gem 'jquery-ui-rails'
+  gem 'sass-rails'
+  gem "twitter-bootstrap-rails"
+  gem 'uglifier'
+end
+
+group :development, :test do
+  gem 'debugger'
+  gem 'guard-rspec'
+end
 
 group :test do
-  gem 'webmock'
-
-  gem 'vcr'
-
-  gem 'launchy'
-
-  gem 'capybara'
-
-  gem 'guard-rspec'
-
-  gem 'rspec'
-
-  gem 'rspec-rails'
-
+  gem 'capybara-webkit'
+  gem 'cucumber-rails'
   gem 'database_cleaner'
-
-  gem 'factory_girl_rails'
-
+  gem 'fabrication'
+  gem 'rspec-rails'
+  gem 'launchy'
   gem 'mongoid-rspec'
 end
-
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'jquery-ui-rails'
-
-  gem 'sass-rails',   '~> 3.2.3'
-
-  gem 'coffee-rails', '~> 3.2.1'
-
-  gem "twitter-bootstrap-rails"
-
-  gem 'bootstrap-sass'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platform => :ruby
-
-  gem 'uglifier', '>= 1.0.3'
-end
-
-gem 'jquery-rails'
-
-gem 'debugger'
