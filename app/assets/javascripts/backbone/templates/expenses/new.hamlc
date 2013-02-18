@@ -1,0 +1,19 @@
+%h1 New expense
+%form#new-expense{:name => 'expense'}
+  .field
+    %label{:for => 'title'} title:
+    %input#title{:name => 'title', :type => 'text', :value => @title}/
+  .field
+    %label{:for => 'description'} description:
+    %input#description{:name => 'description', :type => 'text', :value => @description}/
+  .field
+    %label{:for => 'date'} date:
+    %input#date{:name => 'date', :type => 'text', :value => @date}/
+  .field
+    %label{:for => 'amount'} amount:
+    %input#amount{:name => 'amount', :type => 'text', :value => @amount}/
+  .field
+    %label{:for => 'tags'} tags:
+    %input#amount{:name => 'tags', :type => 'text', :value => @tags}/
+  .actions
+    %input{:type => 'submit', :value => 'Create Expense'}/

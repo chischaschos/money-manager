@@ -13,6 +13,7 @@ gem 'validates_timeliness'
 group :assets do
   gem 'bootstrap-sass'
   gem 'coffee-rails'
+  gem 'haml_coffee_assets'
   gem 'jquery-ui-rails'
   gem 'sass-rails'
   gem 'twitter-bootstrap-rails'

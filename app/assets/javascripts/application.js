@@ -18,5 +18,6 @@
 //= require backbone
 //= require backbone_rails_sync
 //= require backbone_datalink
+//= require hamlcoffee
 //= require backbone/money_manager
 //= require_tree .
