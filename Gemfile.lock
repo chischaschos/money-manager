@@ -168,7 +168,6 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
-    responders (0.6.4)
     rspec (2.10.0)
       rspec-core (~> 2.10.0)
       rspec-expectations (~> 2.10.0)
@@ -245,7 +244,6 @@ DEPENDENCIES
   mongoid_taggable
   rails (~> 3.2)
   rails-backbone
-  responders
   rspec-rails
   sass-rails
   twitter-bootstrap-rails

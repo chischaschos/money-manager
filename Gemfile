@@ -4,8 +4,7 @@ gem 'bson_ext'
 gem 'devise'
 gem 'haml-rails'
 gem 'rails', '~>3.2'
-gem "rails-backbone"
-gem 'responders'
+gem 'rails-backbone'
 gem 'jquery-rails'
 gem 'mongoid'
 gem 'mongoid_taggable'
@@ -16,7 +15,7 @@ group :assets do
   gem 'coffee-rails'
   gem 'jquery-ui-rails'
   gem 'sass-rails'
-  gem "twitter-bootstrap-rails"
+  gem 'twitter-bootstrap-rails'
   gem 'uglifier'
 end
 
