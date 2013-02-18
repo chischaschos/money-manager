@@ -1,7 +1,9 @@
 MoneyManager::Application.routes.draw do
   devise_for :users
 
-  resources :expenses
+  resources :expenses, format: false
 
-  root :to => 'expenses#index'
+  resource :dashboard, only: :show
+
+  root :to => 'dashboards#show'
 end

@@ -4,8 +4,6 @@ describe ExpensesController do
 
   render_views
 
-  use_vcr_cassette
-
   describe "#index" do
 
     context "when already logged in" do
