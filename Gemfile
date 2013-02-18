@@ -29,6 +29,7 @@ group :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'fabrication'
+  gem 'json_spec'
   gem 'rspec-rails'
   gem 'launchy'
   gem 'mongoid-rspec'

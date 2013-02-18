@@ -10,7 +10,7 @@ describe Api::ExpensesController do
     context 'when the user is not logged in' do
       specify do
         get :index
-        response.should_not be_success
+        response.status.should == 401
       end
     end
 
