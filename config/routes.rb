@@ -1,7 +1,9 @@
 MoneyManager::Application.routes.draw do
   devise_for :users
 
-  resources :expenses, format: false
+  scope module: :api do
+    resources :expenses, format: false
+  end
 
   resource :dashboard, only: :show
 

@@ -1,22 +1,26 @@
-#expenses
-  .page-header
-    %h1=t '.title', default: 'Expenses'
+-#.page-header
+  -#%h1=t '.title', default: 'Expenses'
 
-  #calendar.row-fluid
-    .span12
-      %h2= @expenses.title
-      .row-fluid
-        - @expenses.each do |expense|
-          .day.span
-            %h3= expense.date.strftime "%A %e"
-            %table.tags.table-striped.table.table-condensed
-              %tbody
-                - expense.tags.each do |tag, amount|
-                  %tr
-                    %td= tag
-                    %td= number_to_percentage((amount / expense.total) * 100, precision: 0)
-            .total Total #{number_to_currency(expense.total)}
-
+-##calendar.row-fluid
+  -#.span12
+    -#%h2= @expenses.title
+    -#.row-fluid
+      -#- @expenses.each do |expense|
+        -#.day.span
+          -#%h3= expense.date.strftime "%A %e"
+          -#%table.tags.table-striped.table.table-condensed
+            -#%tbody
+              -#- expense.tags.each do |tag, amount|
+                -#%tr
+                  -#%td= tag
+                  -#%td= number_to_percentage((amount / expense.total) * 100, precision: 0)
+          -#.total Total #{number_to_currency(expense.total)}
 
 
-  = link_to t('.new', :default => t("helpers.links.new")), new_expense_path, :class => 'btn btn-primary'
+
+-#= link_to t('.new', :default => t("helpers.links.new")), new_expense_path, :class => 'btn btn-primary'
+:javascript
+  $(function() {
+    new MoneyManager.Routers.DashboardRouter()
+    Backbone.history.start()
+  })

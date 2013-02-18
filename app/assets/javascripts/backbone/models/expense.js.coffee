@@ -1,4 +1,6 @@
 class MoneyManager.Models.Expense extends Backbone.Model
+  url: '/expenses'
+
   paramRoot: 'expense'
 
   defaults:

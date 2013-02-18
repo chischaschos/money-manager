@@ -9,3 +9,11 @@ window.MoneyManager =
   Collections: {}
   Routers: {}
   Views: {}
+
+$ ->
+  #setup some plugins
+  $.datepicker.setDefaults
+    dateFormat: "yy-mm-dd"
+
+  $('.datepicker').datepicker()
+

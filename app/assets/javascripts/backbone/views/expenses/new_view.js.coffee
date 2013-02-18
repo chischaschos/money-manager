@@ -1,37 +1,31 @@
 MoneyManager.Views.Expenses ||= {}
 
 class MoneyManager.Views.Expenses.NewView extends Backbone.View
-  template: JST["backbone/templates/expenses/new"]
+  template: JST['backbone/templates/expenses/new']
 
   events:
-    "submit #new-expense": "save"
+    'click input[type=submit]': 'save'
 
-  constructor: (options) ->
-    super(options)
-    @model = new @collection.model()
+  initialize: ->
+    @model = new MoneyManager.Models.Expense
 
-    @model.bind("change:errors", () =>
+    @model.bind 'change:errors', () =>
       @render()
-    )
 
   save: (e) ->
     e.preventDefault()
     e.stopPropagation()
 
-    @model.unset("errors")
+    @model.unset 'errors'
 
-    @collection.create(@model.toJSON(),
+    @model.save {},
       success: (expense) =>
-        @model = expense
-        window.location.hash = "/#{@model.id}"
+        window.location = '/'
 
       error: (expense, jqXHR) =>
-        @model.set({errors: $.parseJSON(jqXHR.responseText)})
-    )
+        @model.set errors: $.parseJSON(jqXHR.responseText)
 
   render: ->
-    $(@el).html(@template(@model.toJSON() ))
-
-    @$("form").backboneLink(@model)
-
-    return this
+    @$el.html @template(@model.toJSON())
+    @$('form').backboneLink(@model)
+    @
