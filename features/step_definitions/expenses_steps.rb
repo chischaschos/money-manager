@@ -6,3 +6,7 @@ end
 Then /^I should see one expense$/ do
   page.should have_content("Monday's beer")
 end
+
+Then /^I should see one Incomes Source$/ do
+  page.should have_content('Crazy Income')
+end

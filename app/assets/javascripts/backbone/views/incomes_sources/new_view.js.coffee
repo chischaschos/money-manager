@@ -1,13 +1,13 @@
-MoneyManager.Views.Expenses ||= {}
+MoneyManager.Views.IncomesSources ||= {}
 
-class MoneyManager.Views.Expenses.NewView extends Backbone.View
-  template: JST['backbone/templates/expenses/new']
+class MoneyManager.Views.IncomesSources.NewView extends Backbone.View
+  template: JST['backbone/templates/incomes_sources/new']
 
   events:
-    'click input[type=submit]': 'save'
+    '#add-income-source': 'save'
 
   initialize: ->
-    @model = new MoneyManager.Models.Expense
+    @model = new MoneyManager.Models.IncomesSource
     @model.bind 'change:errors', () =>
       @render()
 

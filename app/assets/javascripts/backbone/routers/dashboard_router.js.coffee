@@ -2,10 +2,13 @@ class MoneyManager.Routers.DashboardRouter extends Backbone.Router
   initialize: (options) ->
     @expenses = new MoneyManager.Collections.ExpensesCollection()
     @expenses.reset options.expenses
+    @income_sources = new MoneyManager.Collections.IncomesSourcesCollection()
+    @income_sources.reset options.income_sources
 
   routes:
     '': 'indexExpenses'
     'expenses/new': 'newExpense'
+    'income_sources/new': 'newIncomeSource'
     #'index'    : 'index'
     #':id/edit' : 'edit'
     #':id'      : 'show'
@@ -16,7 +19,14 @@ class MoneyManager.Routers.DashboardRouter extends Backbone.Router
     $('#dashboard').html @view.render().el
 
   indexExpenses: ->
-    @view = new MoneyManager.Views.Expenses.IndexView expenses: @expenses
+    @view = new MoneyManager.Views.Expenses.IndexView
+      expenses: @expenses
+      incomes: @incomes
+
+    $('#dashboard').html @view.render().el
+
+  newIncomeSource:  ->
+    @view = new MoneyManager.Views.IncomesSources.NewView
     $('#dashboard').html @view.render().el
 
   #show: (id) ->

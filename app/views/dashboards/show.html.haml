@@ -1,5 +1,8 @@
 :javascript
   $(function() {
-    new MoneyManager.Routers.DashboardRouter({expenses: #{@expenses.to_json}})
+    new MoneyManager.Routers.DashboardRouter({
+      expenses: #{@expenses.to_json},
+      income_sources: #{@income_sources.to_json}
+      })
     Backbone.history.start()
   })

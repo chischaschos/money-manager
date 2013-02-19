@@ -3,6 +3,7 @@ MoneyManager::Application.routes.draw do
 
   scope module: :api do
     resources :expenses, format: false
+    resources :income_sources, format: false
   end
 
   resource :dashboard, only: :show

@@ -1,0 +1,10 @@
+%h1 New Incomes Source
+%form#new-incomes_source
+  .field
+    %label{:for => 'name'} name:
+    %input#name{:name => 'name', :type => 'text', :value => @name}
+  .field
+    %label{:for => 'amount'} amount:
+    %input#amount{:name => 'amount', :type => 'text', :value => @amount}
+  .actions
+    %input#add-income-source{:type => 'submit', :value => 'Add Incomes Source'}

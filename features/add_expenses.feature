@@ -19,12 +19,10 @@ Feature: Add expenses
     Then I should see the dashboard page
     And I should see one expense
 
-    When I click 'Add Money Source'
-    Then I should see the Add Money Source form
-
-    Given I fill in the Add Money Source form
-    When I click 'Add Money Source'
+    Given I click 'Add Incomes Source'
+    And I fill in the Add Incomes Source form
+    And I click 'Add Incomes Source'
     Then I should see the dashboard page
-    And I should see one Money Source
+    And I should see one Incomes Source
 
     And I should see my daily statement

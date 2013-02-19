@@ -11,3 +11,8 @@ Given /^I fill in the Add Expense form$/ do
   fill_in 'amount', with: '200'
   fill_in 'tags', with: 'beer'
 end
+
+Given /^I fill in the Add Incomes Source form$/ do
+  fill_in 'name', with: 'Crazy income'
+  fill_in 'amount', with: '10000'
+end
