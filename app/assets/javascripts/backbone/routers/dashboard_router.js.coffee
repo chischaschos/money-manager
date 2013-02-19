@@ -1,7 +1,7 @@
 class MoneyManager.Routers.DashboardRouter extends Backbone.Router
-  #initialize: (options) ->
-    #@expenses = new MoneyManager.Collections.ExpensesCollection()
-    #@expenses.reset options.expenses
+  initialize: (options) ->
+    @expenses = new MoneyManager.Collections.ExpensesCollection()
+    @expenses.reset options.expenses
 
   routes:
     '': 'indexExpenses'
@@ -16,7 +16,7 @@ class MoneyManager.Routers.DashboardRouter extends Backbone.Router
     $('#dashboard').html @view.render().el
 
   indexExpenses: ->
-    @view = new MoneyManager.Views.Expenses.IndexView
+    @view = new MoneyManager.Views.Expenses.IndexView expenses: @expenses
     $('#dashboard').html @view.render().el
 
   #show: (id) ->
