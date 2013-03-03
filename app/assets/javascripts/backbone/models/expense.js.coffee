@@ -13,3 +13,7 @@ class MoneyManager.Models.Expense extends Backbone.Model
 class MoneyManager.Collections.ExpensesCollection extends Backbone.Collection
   model: MoneyManager.Models.Expense
   url: '/expenses'
+
+  total: ->
+    adder = (memo, expense) -> memo += expense.get('amount')
+    @reduce adder, 0

@@ -8,5 +8,9 @@ Then /^I should see one expense$/ do
 end
 
 Then /^I should see one Incomes Source$/ do
-  page.should have_content('Crazy Income')
+  page.should have_content('Money In: 10000')
+end
+
+Then /^I should see the expenses total$/ do
+  page.should have_content('Money Out: 200')
 end

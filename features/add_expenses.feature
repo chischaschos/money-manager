@@ -18,11 +18,10 @@ Feature: Add expenses
     And I click 'Create Expense'
     Then I should see the dashboard page
     And I should see one expense
+    And I should see the expenses total
 
     Given I click 'Add Incomes Source'
     And I fill in the Add Incomes Source form
-    And I click 'Add Incomes Source'
+    And I click button 'Add Incomes Source'
     Then I should see the dashboard page
     And I should see one Incomes Source
-
-    And I should see my daily statement

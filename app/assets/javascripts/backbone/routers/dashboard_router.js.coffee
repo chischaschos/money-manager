@@ -21,7 +21,7 @@ class MoneyManager.Routers.DashboardRouter extends Backbone.Router
   indexExpenses: ->
     @view = new MoneyManager.Views.Expenses.IndexView
       expenses: @expenses
-      incomes: @incomes
+      income_sources: @income_sources
 
     $('#dashboard').html @view.render().el
 

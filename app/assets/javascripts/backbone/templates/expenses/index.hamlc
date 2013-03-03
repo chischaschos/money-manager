@@ -1,4 +1,8 @@
-%h1 Daily statement
+.statistics
+  .out Money Out: #{@total_expense}
+  .in Money In: #{@total_income}
+
+%h2 Daily statement
 
 %table.table-striped.table.table-condensed
   %thead

@@ -4,9 +4,10 @@ class MoneyManager.Views.IncomesSources.NewView extends Backbone.View
   template: JST['backbone/templates/incomes_sources/new']
 
   events:
-    '#add-income-source': 'save'
+    'click #add-income-source': 'save'
 
   initialize: ->
+
     @model = new MoneyManager.Models.IncomesSource
     @model.bind 'change:errors', () =>
       @render()

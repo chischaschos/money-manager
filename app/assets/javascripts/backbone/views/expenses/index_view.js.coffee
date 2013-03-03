@@ -5,6 +5,7 @@ class MoneyManager.Views.Expenses.IndexView extends Backbone.View
 
   initialize: (options) ->
     @expenses = options.expenses
+    @income_sources = options.income_sources
     @expenses.bind 'reset', @addAll
 
   addAll: () =>
@@ -15,6 +16,9 @@ class MoneyManager.Views.Expenses.IndexView extends Backbone.View
     @$('tbody').append view.render().el
 
   render: =>
-    @$el.html @template(expenses: @options.expenses.toJSON() )
+    @$el.html @template
+      expenses: @options.expenses.toJSON()
+      total_expense: @expenses.total()
+      total_income: @income_sources.total()
     @addAll()
     @
